@@ -7,4 +7,4 @@ document.querySelector('.score').textContent = 10;
 
 console.log(document.querySelector('.guess').valuealue);
 document.querySelector('.guess').value = 23;
-// Ih this in git hub
+// Is this in git hub
