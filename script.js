@@ -220,3 +220,16 @@ currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
 */
+// USD to Euro
+const eurtoUsd = 1.1;
+console.log(movements);
+// PIPELINES
+const totalDepositeUSD = movements
+  .filter(mov => mov > 0)
+  .map((mov, i, arr) => {
+    // console.log(arr);
+    return mov * eurtoUsd;
+  })
+  // .map(mov=> mov*eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositeUSD);
